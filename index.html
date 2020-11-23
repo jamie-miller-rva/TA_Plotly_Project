@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+
+  <!-- link to Bootstrap 3.3 stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <!-- link to latest plotly.js source code and dependencies -->
+  <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+
+</head>
+
+<body>
+  
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+
+    <!-- Start of Container for all Visualizations -->
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- location of Dataset selector -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+
+        <div class="panel panel-primary">
+
+          <!-- location for sample demographic information (metadata) -->
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>          
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+
+      </div>
+
+      <div class="col-md-5">
+        <!-- location for bar chart -->
+        <div id="bar"></div>
+      </div>
+
+      <div class="col-md-5">
+        <!-- location for washing frequency gauage -->
+        <div id="gauge"></div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Location for bubble chart -->
+        <div id="bubble"></div>
+      </div>
+    </div>
+
+  </div>
+  <!-- End of Container -->
+
+  <!-- Start of Footer -->
+  <div class="col-md-12">
+    <div class="well well-sm text-center">Analysis and Visualizations prepared by Jamie Miller</div>
+  </div>
+  <!-- End of Footer -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/app_TA_HHour.js"></script>
+  <!-- <script src="static/js/bonus.js"></script> -->
+  <script src="data/samples.json"></script>
+
+</body>
+
+</html>
